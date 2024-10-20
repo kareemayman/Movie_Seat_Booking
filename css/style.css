@@ -79,3 +79,16 @@ select {
 .seat-info .occupied-seat .seat {
     border-color: white;
 }
+
+.container .projector {
+    background-color: white;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    height: 60px;
+    box-shadow: 0 3px 6px 1px white;
+
+    /* Create the trapezoid shape */
+    transform: perspective(200px) rotateX(-20deg);
+}
