@@ -25,11 +25,12 @@ body {
 .select-movie {
     display: flex;
     justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
 }
 
 select {
     padding: 5px 15px;
-    margin-bottom: 30px;
     margin-left: 10px;
     border-radius: 6px;
     border: none;
@@ -39,4 +40,42 @@ select {
     -moz-appearance: none;     /* For Firefox */
     appearance: none;          /* Standard property */
     
+}
+
+.seat-info {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgb(0 0 0 / 10%);
+    padding: 5px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 6px;
+    color: gray;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+.seat-info > div {
+    display: flex;
+    align-items: center;
+    gap: 5px
+}
+
+.seat-info .seat {
+    width: 0;
+    height: 0;
+    border: 7px solid rgb(66, 64, 73);
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-top-width: 5px;
+}
+
+.seat-info .selected-seat .seat {
+    border-color: cyan;
+}
+
+.seat-info .occupied-seat .seat {
+    border-color: white;
 }
