@@ -63,7 +63,7 @@ select {
     gap: 5px
 }
 
-.seat-info .seat {
+.seat {
     width: 0;
     height: 0;
     border: 7px solid rgb(66, 64, 73);
@@ -72,12 +72,12 @@ select {
     border-top-width: 5px;
 }
 
-.seat-info .selected-seat .seat {
-    border-color: cyan;
+.selected {
+    border-color: cyan !important;
 }
 
-.seat-info .occupied-seat .seat {
-    border-color: white;
+.occupied {
+    border-color: white !important;
 }
 
 .container .projector {
@@ -91,4 +91,47 @@ select {
 
     /* Create the trapezoid shape */
     transform: perspective(200px) rotateX(-20deg);
+}
+
+.container .seats {
+    display: flex;
+    margin-bottom: 40px;
+    justify-content: space-between;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container .seats .left {
+    display: flex;
+    width: 20%;
+    gap: 7px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.container .seats .mid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 40%;
+    gap: 7px;
+    justify-content: center;
+}
+
+
+.container .seats .right {
+    display: flex;
+    width: 20%;
+    gap: 7px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.container .seats .seat:not(.occupied) {
+    transform: 0.3s;
+    cursor: pointer;
+}
+
+.container .seats .seat:not(.occupied):hover {
+    scale: 1.3;
 }
