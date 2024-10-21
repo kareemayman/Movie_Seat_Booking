@@ -66,7 +66,7 @@ select {
 .seat {
     width: 0;
     height: 0;
-    border: 7px solid rgb(66, 64, 73);
+    border: 7px solid rgb(76, 75, 83);
     border-top-left-radius: 50%;
     border-top-right-radius: 50%;
     border-top-width: 5px;
