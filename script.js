@@ -1,8 +1,10 @@
+// Selecting Elements From DOM
 const seats = document.querySelector(".seats")
 const selectedSeatsCount = document.querySelector(".selection .num-of-seats")
 const selectedMovie = document.querySelector('.select-movie select')
 const price = document.querySelector('.selection .price')
 
+// Loading Data From Local Storage
 selectedMovie.value = localStorage.getItem('selectedMovie') || selectedMovie.value
 
 let moviePrice = parseInt(localStorage.getItem('selectedMovie')) || parseInt(selectedMovie.value)
@@ -13,6 +15,7 @@ selectedSeatsCount.textContent = parseInt(localStorage.getItem('seatsCount')) ||
 
 let seatsArr = JSON.parse(localStorage.getItem('seatsArr')) || [] // 0 => empty, 1 => selected, 2 => occupied
 
+// Initiallizing SeatsArr With Empty Seats If Not Found In Local Storage
 if (!JSON.parse(localStorage.getItem('seatsArr'))) {
 
     for (i = 0; i < 48; i++) {
